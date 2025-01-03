@@ -1,12 +1,11 @@
-package controller;
+package com.tpe.controller;
 
-import domain.Message;
-import repository.DbRepository;
-import repository.FileRepository;
-import repository.Repository;
-import service.MailService;
-import service.MessageService;
-import service.WhatsappService;
+import com.tpe.domain.Message;
+import com.tpe.repository.FileRepository;
+import com.tpe.repository.Repository;
+import com.tpe.service.MailService;
+import com.tpe.service.MessageService;
+import com.tpe.service.WhatsappService;
 
 public class MessageApplication {
     public static void main(String[] args) {

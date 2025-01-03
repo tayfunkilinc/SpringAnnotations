@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springframework.version>5.3.9</springframework.version>
         <javax.annotation.api.version>1.3.2</javax.annotation.api.version>
@@ -20,12 +20,12 @@
         <!--spring-context (bir spring uygulaması için gerekli ve yeterlidir.)-->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId> <!--  -->
+            <artifactId>spring-context</artifactId> <!-- spring temel islevleri icin yeterlidir -->
             <version>${springframework.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>javax.annotation</groupId>
+            <groupId>javax.annotation</groupId> <!-- spring icin gerekli degil bir ozellik gorecegiz burda -->
             <artifactId>javax.annotation-api</artifactId>
             <version>${javax.annotation.api.version}</version>
         </dependency>

@@ -1,6 +1,6 @@
-package service;
+package com.tpe.service;
 
-import domain.Message;
+import com.tpe.domain.Message;
 
 public interface MessageService {
     void sendMessage(Message message);

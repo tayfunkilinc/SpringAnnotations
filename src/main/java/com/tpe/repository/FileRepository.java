@@ -1,7 +1,9 @@
-package repository;
+package com.tpe.repository;
 
-import domain.Message;
+import com.tpe.domain.Message;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FileRepository implements Repository{
     @Override
     public void save(Message message) {

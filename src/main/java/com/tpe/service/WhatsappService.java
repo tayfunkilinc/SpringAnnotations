@@ -1,7 +1,7 @@
-package service;
+package com.tpe.service;
 
-import domain.Message;
-import repository.Repository;
+import com.tpe.domain.Message;
+import com.tpe.repository.Repository;
 
 public class WhatsappService implements MessageService{
 

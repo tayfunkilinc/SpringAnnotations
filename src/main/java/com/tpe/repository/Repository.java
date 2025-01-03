@@ -1,6 +1,6 @@
-package repository;
+package com.tpe.repository;
 
-import domain.Message;
+import com.tpe.domain.Message;
 
 public interface Repository {
         void save(Message message);

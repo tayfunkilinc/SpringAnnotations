@@ -1,4 +1,4 @@
-package domain;
+package com.tpe.domain;
 
 public class Message {
 
