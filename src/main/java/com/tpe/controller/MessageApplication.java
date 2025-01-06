@@ -17,7 +17,6 @@ public class MessageApplication {
 
         //bu mesaji maille gonderme yapsin
         MailService mailService = new MailService();
-
         mailService.sendMessage(message);
 
         //artik mail kullanmayalim whatshap ile gonderelim denince ne yapacagiz -- bunun icin whatsapp service olusturup yaparim
@@ -25,13 +24,13 @@ public class MessageApplication {
         whatsappService.sendMessage(message);*/ //--> bunun yerine referansimizi interfaceden alalim
 
         //ref interfaceden alalim
-        /*MessageService service3 = new WhatsappService();
+        /*  service3 = new WhatsappService();
         service3.sendMessage(message);*/
         //herhangi bir service degisikliginde direk
 
         Repository repository = new FileRepository(); // DI bagimlilik enjeksiyonu -- referansi interfaceden aldikki ilerde repo degisikliklerinden etkilenmesin
         MessageService service = new WhatsappService(repository);
-        service = new MailService(repository); //--> referansimiz interface oldugu icin direk mail servise gecebildim
+        //service = new MailService(repository); //--> referansimiz interface oldugu icin direk mail servise gecebildim
         service.sendMessage(message);
 
         //gonderilen mesaji kaydedelim -- repositorye kayitlarimizi yapalim  bunuda degistirebilir DB yaparken dosyaya kayit isteyebilir onun icin interface kullaniyoruz
@@ -40,6 +39,20 @@ public class MessageApplication {
         MessageService service2 = new WhatsappService(repository);
         service2.sendMessage(message);
         service2.saveMessage(message);
+
+
+        //objeler arasindaki bagimliligi gevsetmek icin
+        //1- ref olarak interface kullandik
+        //2-bagimliligi dogrudan vermek yerine daha
+        //sonra parametreli const (veya setter ) ile verdik
+
+
+        //problem
+        //1-obhleri biz olusturuyoruz
+        //2-objelerin bagimliliklarini biz manuel olarak enjekte etmek zorundayiz
+
+        //cozum
+        //spring is COMING :)
 
 
 
